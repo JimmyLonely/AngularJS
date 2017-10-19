@@ -8,10 +8,13 @@
 </head>
 <body ng-app="app">
   <div ng-controller="appCtrl">
-    {{firstName}}
+    <ng-custom-directive> </ng-custom-directive>
+    <ng-custom-directive2> </ng-custom-directive2>
+
+    <label ng-bind= 'firstName'> {{123}}</label>
   </div>
 
 
-  <script src="/ctrl/customDirectiveCtrl.js"></script>
+  <script src="/ctrl/customDirective.js"></script>
 </body>
 </html>

@@ -3,6 +3,10 @@ app.controller('appCtrl', ['$scope', '$rootScope', '$filter', appCtrl])
 
 function appCtrl($scope, $rootScope, $filter) {
     $scope.firstName = $filter('customFilter')('jimmy', 'a', 'b', 'c');
+    $scope.lastName = [{"age": 20,"id": 10,"name": "iphone"},
+    {"age": 12,"id": 11,"name": "sunm xing"},
+    {"age": 44,"id": 12,"name": "test abc"}
+    ]
 }
 
 
