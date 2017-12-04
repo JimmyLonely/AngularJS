@@ -1,6 +1,8 @@
-var app = angular.module('app', [])
-app.controller('appCtrl', ['$scope', '$rootScope', appCtrl])
-
-function appCtrl($scope, $rootScope) {
-    $scope.firstName = 12345678.0123;
-}
+angular.module('app',['ngRoute'])
+.config(['$routeProvider', function($routeProvider){
+    $routeProvider
+    .when('/',{template:'这是首页页面'})
+    .when('/computers',{template:'这是电脑分类页面'})
+    .when('/printers',{template:'这是打印机页面'})
+    .otherwise({redirectTo:'/'});
+}]);
