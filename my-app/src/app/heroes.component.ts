@@ -15,6 +15,11 @@ export class HeroesComponent implements OnInit {
   title = 'Tour of heroes';
   selectedHero: Hero;
   heroes: Hero[];
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
+
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
@@ -23,7 +28,19 @@ export class HeroesComponent implements OnInit {
       this.heroes = heroes;
     });
   }
-  ngOnInit(): void {
-    this.getHeroes();
+
+  add(name: string): void {
+    name = name.trim();
+    this.heroService.create(name).then(hero => {
+      this.heroes.push(hero);
+      this.selectedHero = null;
+    })
   }
+
+  delete(hero: Hero): void {
+    this.heroService.delete(hero).then(respone => {
+      this.heroes = this.heroes.filter(h => h !== hero);
+    })
+  }
+
 }
