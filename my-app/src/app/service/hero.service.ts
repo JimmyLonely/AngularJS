@@ -46,7 +46,7 @@ export class HeroService {
                .then(response => {
                  return response.json() as Hero;
                })
-}
+  }
 
   delete(hero: Hero): Promise<void> {
     return this.http
