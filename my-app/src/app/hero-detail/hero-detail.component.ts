@@ -5,10 +5,10 @@ import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
 //  Service
-import { HeroService } from './hero.service';
+import { HeroService } from '../service/hero.service';
 
 //  Component
-import { Hero } from './hero';
+import { Hero } from '../model/hero';
 
 @Component({
     selector: 'hero-detail',
