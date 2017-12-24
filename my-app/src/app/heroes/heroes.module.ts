@@ -16,7 +16,8 @@ import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
 
-
+// 3rd
+import 'rxjs/add/operator/switchMap';
 
 @NgModule({
   imports: [

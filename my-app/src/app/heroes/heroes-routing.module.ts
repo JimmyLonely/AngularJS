@@ -8,10 +8,10 @@ import { HeroesComponent } from './heroes.component';
 const heroesRoutes: Routes = [
   {
     path: 'heroes',
-    component: HeroDetailComponent
-  },  {
-    path: 'hero-detail',
     component: HeroesComponent
+  }, {
+    path: 'hero/:id',
+    component: HeroDetailComponent
   }
 ]
 

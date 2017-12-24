@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 // Route
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Components
 import { AppComponent } from './app/app.component';
@@ -13,6 +14,7 @@ import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     HeroesModule,
     AppRoutingModule
   ],

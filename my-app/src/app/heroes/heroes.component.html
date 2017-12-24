@@ -2,7 +2,7 @@
   <div>
       <h1>练习2</h1>
       <ul class="heroes">
-        <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+        <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero.id === selectedHeroId">
           <span class="hero">{{hero.id}}</span>
           {{hero.name}}
           <button (click)="delete(hero); $event.stopPropagation()">Delete</button>

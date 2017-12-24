@@ -1,23 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
+import { Router, ActivatedRoute, ParamMap} from '@angular/router';
 
 @Component({
-  selector: 'my-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
+
 export class HeroesComponent implements OnInit {
   constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
     private heroService: HeroService
   ) { }
 
   title = 'Tour of heroes';
   selectedHero: Hero;
   heroes: Hero[];
+  selectedHeroId: Number;
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.activatedRoute.paramMap.switchMap((params: ParamMap) => {
+      this.selectedHeroId = + params.get('id');
+      return this.heroService.getHeroes();
+    }).subscribe((heroes) => {
+      this.heroes = heroes;
+    })
   }
 
   onSelect(hero: Hero): void {
