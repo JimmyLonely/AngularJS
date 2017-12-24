@@ -2,14 +2,12 @@
 import { Component, Input, OnInit, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //  Service
 import { HeroService } from './hero.service';
 
 //  Component
 import { Hero } from './hero';
-import { slideInDownAnimation } from '../animation';
 
 @Component({
   templateUrl: './hero-detail.component.html'
@@ -24,10 +22,6 @@ export class HeroDetailComponent implements OnInit {
   ) {}
 
   @Input() hero: Hero;
-
-  @HostBinding('@routeAnimation') routeAnimation = true;
-  @HostBinding('style.display')   display = 'block';
-  @HostBinding('style.position')  position = 'absolute';
 
   ngOnInit(): void {
     this.activatedRoute.paramMap
