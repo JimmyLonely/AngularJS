@@ -7,7 +7,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './service/in-memory-data.service';
 
 // Directive
-
 import { SpyDirective } from './directive/spy.directive'
 
 // Route
@@ -24,6 +23,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.component';
+import { PageNotFoundComponent } from './404/404.component'
+import { RouterComponent } from './router/router.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,8 @@ import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.compon
     HeroesComponent,
     DataBindComponent,
     LifeCycleHookComponent,
+    PageNotFoundComponent,
+    RouterComponent,
     SpyDirective
   ],
   providers: [
