@@ -1,13 +1,19 @@
+// Lib
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+// Components
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent} from './life-cycle-hook/life-cycle-hook.component';
+import { PageNotFoundComponent } from './404/404.component'
+import { RouterComponent } from './router/router.component';
 
-const routes: Routes = [ {
+// Routes
+const routes: Routes = [
+  {
     path: 'dashboard',
     component: DashboardComponent
   }, {
@@ -22,6 +28,16 @@ const routes: Routes = [ {
   }, {
     path: 'life-cycle-hook',
     component: LifeCycleHookComponent
+  }, {
+    path: 'router',
+    component: RouterComponent
+  }, {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  }, {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 
