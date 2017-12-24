@@ -1,6 +1,6 @@
 // Lib
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -23,7 +23,7 @@ import 'rxjs/add/operator/switchMap';
 
 @NgModule({
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule,
     HttpModule,
     CrisisCenterRoutingModule,

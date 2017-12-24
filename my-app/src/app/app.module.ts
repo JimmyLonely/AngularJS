@@ -1,6 +1,6 @@
 // Lib
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 // Route
@@ -13,22 +13,18 @@ import { ComposeMessageComponent } from './compose-message.component';
 
 // Module
 import { HeroesModule } from './heroes/heroes.module';
-import { CrisisCenterModule  } from './crisis-center/crisis-center.module';
-import { AdminModule } from './admin/admin.module';
 
 // Service
-
 import { LoginRoutingModule }      from './login/login-routing.module';
 import { LoginComponent }          from './login/login.component';
+import { Router } from '@angular/router';
 
 @NgModule({
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule,
     HeroesModule,
-    CrisisCenterModule,
     LoginRoutingModule,
-    AdminModule,
     AppRoutingModule
   ],
   declarations: [
@@ -42,4 +38,8 @@ import { LoginComponent }          from './login/login.component';
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+}
