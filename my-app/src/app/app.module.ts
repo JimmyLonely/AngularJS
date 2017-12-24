@@ -13,14 +13,16 @@ import { ComposeMessageComponent } from './compose-message.component';
 
 // Module
 import { HeroesModule } from './heroes/heroes.module';
-import { CrisisCenterModule  } from './crisis-center/crisis-center.module'
+import { CrisisCenterModule  } from './crisis-center/crisis-center.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    HeroesModule,
-    CrisisCenterModule ,
+    // HeroesModule,
+    // CrisisCenterModule,
+    AdminModule,
     AppRoutingModule
   ],
   declarations: [
