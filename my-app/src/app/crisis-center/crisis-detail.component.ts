@@ -43,6 +43,6 @@ export class CrisisDetailComponent implements OnInit {
 
   goCrisises() {
     let crisisId = this.crisis.id || '';
-    this.router.navigate(['/crisises', {id:crisisId, foo: 'foo'}]);
+    this.router.navigate(['../', {id:crisisId, foo: 'foo'}], {relativeTo: this.activatedRoute});
   }
 }

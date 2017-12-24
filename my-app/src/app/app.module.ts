@@ -1,5 +1,7 @@
 // Lib
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 // Route
 import { AppRoutingModule } from './app-routing.module';
@@ -7,20 +9,24 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app/app.component';
 import { PageNotFoundComponent } from './404/404.component'
+import { ComposeMessageComponent } from './compose-message.component';
 
 // Module
 import { HeroesModule } from './heroes/heroes.module';
-import { CrisisesModule } from './crisis-center/crisises.module'
+import { CrisisCenterModule  } from './crisis-center/crisis-center.module'
 
 @NgModule({
   imports: [
+    BrowserModule,
+    FormsModule,
     HeroesModule,
-    CrisisesModule,
+    CrisisCenterModule ,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ComposeMessageComponent
   ],
   providers: [
   ],

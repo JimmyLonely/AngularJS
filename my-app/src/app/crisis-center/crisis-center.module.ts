@@ -10,11 +10,13 @@ import { CrisisService } from './crisis.service';
 import { InMemoryDataService } from '../heroes/in-memory-data.service';
 
 // Router
-import { CrisisesRoutingModule } from './crisises-routing.module';
+import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
 
 // Component
-import { CrisisDetailComponent } from './crisis-detail.component';
-import { CrisisesComponent } from './crisises.component';
+import { CrisisCenterComponent }     from './crisis-center.component';
+import { CrisisesComponent }       from './crisises.component';
+import { CrisisDetailComponent }     from './crisis-detail.component';
+import { CrisisCenterHomeComponent } from './crisis-center-home.component';
 
 // 3rd
 import 'rxjs/add/operator/switchMap';
@@ -24,12 +26,14 @@ import 'rxjs/add/operator/switchMap';
     BrowserModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forFeature(InMemoryDataService),
-    CrisisesRoutingModule
+    CrisisCenterRoutingModule,
+    InMemoryWebApiModule.forFeature(InMemoryDataService)
   ],
   declarations: [
+    CrisisCenterComponent,
+    CrisisesComponent,
     CrisisDetailComponent,
-    CrisisesComponent
+    CrisisCenterHomeComponent
   ],
   providers: [
     InMemoryDataService,
@@ -37,4 +41,4 @@ import 'rxjs/add/operator/switchMap';
   ]
 })
 
-export class CrisisesModule { }
+export class CrisisCenterModule { }
