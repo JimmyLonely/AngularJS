@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 // Route
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Components
 import { AppComponent } from './app/app.component';
@@ -11,11 +10,12 @@ import { PageNotFoundComponent } from './404/404.component'
 
 // Module
 import { HeroesModule } from './heroes/heroes.module';
+import { CrisisesModule } from './crisis-center/crisises.module'
 
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
     HeroesModule,
+    CrisisesModule,
     AppRoutingModule
   ],
   declarations: [
@@ -26,7 +26,5 @@ import { HeroesModule } from './heroes/heroes.module';
   ],
   bootstrap: [AppComponent]
 })
-
-
 
 export class AppModule { }

@@ -1,0 +1,19 @@
+<div>
+  <div>
+      <h1>练习2</h1>
+      <ul class="crisises">
+        <li *ngFor="let crisis of crisises" (click)="onSelect(crisis)" [class.selected]="crisis.id === selectedCrisisId">
+          <span class="crisis">{{crisis.id}}</span>
+          {{crisis.name}}
+          <button (click)="delete(crisis); $event.stopPropagation()">Delete</button>
+        </li>
+      </ul>
+  </div>
+
+  <div>
+    <label>Crisis name:</label> <input #crisisName />
+    <button (click)="add(crisisName.value); crisisName.value=''">
+      Add
+    </button>
+  </div>
+</div>

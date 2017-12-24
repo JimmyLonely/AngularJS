@@ -1,0 +1,13 @@
+<div>
+    <h1>练习1</h1>
+    <div *ngIf="crisis">
+      <label>name:</label>
+      {{ crisis.id}}
+      {{ crisis.name}}
+      <br>
+      <input type="text" [(ngModel)]="crisis.name">
+    </div>
+    <div (click)="goBack()">Back</div>
+    <div (click)="save()">Save</div>
+    <input type="button" (click)="goCrisises()" value="Go Crisises">
+</div>
