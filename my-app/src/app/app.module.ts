@@ -1,5 +1,6 @@
 // Lib
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -25,9 +26,11 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.component';
 import { PageNotFoundComponent } from './404/404.component'
 import { RouterComponent } from './router/router.component';
+import { DataBindSample1 } from './data-bind-sample-1/data-bind-sample-1.component';
 
 @NgModule({
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
@@ -43,7 +46,8 @@ import { RouterComponent } from './router/router.component';
     LifeCycleHookComponent,
     PageNotFoundComponent,
     RouterComponent,
-    SpyDirective
+    SpyDirective,
+    DataBindSample1
   ],
   providers: [
     HeroService,
