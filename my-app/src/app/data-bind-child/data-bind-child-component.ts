@@ -10,11 +10,21 @@ export class DataBindChildComponent {
 
   ) {}
 
- @Input() hero = this.hero;
- @Input() a = 12;
+ @Input() fontSizePx;
 
- @Output() childDelete = new EventEmitter();
-  delete($event) {
-    this.childDelete.emit($event);
+
+  add () {
+    this.fontSizePx++;
+    // this.delete();
+  }
+
+  del () {
+    this.fontSizePx--;
+    // this.delete();
+  }
+
+ @Output() sizeChange = new EventEmitter();
+  delete() {
+    this.sizeChange.emit(this.fontSizePx);
   }
 }

@@ -1,5 +1,5 @@
 <div>
-  <span>{{hero.name}}</span>
-  <span>{{hero.id}}</span>
-  <input type="button" (click)="delete($event)" value="Delete">
+  <label [style.fontSize.px]="fontSizePx">font size is {{fontSizePx}}</label>
+  <input type="button" value="Add" (click)="add()">
+  <input type="button" value="Delete" (click)="del()">
 </div>

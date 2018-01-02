@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Output, Input } from "@angular/core";
 import { Hero } from '../model/hero';
 
 @Component({
@@ -18,6 +18,7 @@ export class DataBindSample1Component {
   today = new Date()
   showClass = undefined
   jimmyName = ''
+  fontSize = 12
 
   getVal() {
     return 2+2;

@@ -3,20 +3,17 @@
     <label>{{title}}</label>
     <label>My favorite hero: {{hero.name}}</label>
     <ul>
-      <li *ngFor="let hero of heroes">
-        <data-bind-child (childDelete)="fatherDelete($event)" [hero]='hero' [ngClass]="{a1: true}"> </data-bind-child>
+      <li *ngFor="let hero of heroes; let i=index; let e=even; let o=odd; let l=last">
+        {{ hero.name + ' ' + i + ' ' + e + ' ' + o + ' ' + l}}
       </li>
     </ul>
-    <div *ngIf="heroes.length >= 3">
-      Two Many Heroes
+    <div [ngSwitch]="'0'">
+      <label *ngSwitchCase="'jimmy2'">1</label>
+      <label *ngSwitchCase="'jimmy1'">2</label>
+      <label *ngSwitchCase="'jimmy1'">3</label>
+      <label *ngSwitchCase="'jimmy6'">4</label>
+      <label *ngSwitchDefault>default</label>
     </div>
-    <div class="class1 class2 class3 class4" [ngClass]="{a1: true}">
-      class
-    </div>
-    <div [style.color]="'red'">
-      style
-    </div>
-    <input type="button" (click)="clickEvent($event)" >
   </div>
   <div>
     <input #phone id="test" [attr.aria-label]="title" value='jimmy'>
