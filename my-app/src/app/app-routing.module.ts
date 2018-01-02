@@ -10,13 +10,13 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent} from './life-cycle-hook/life-cycle-hook.component';
 import { PageNotFoundComponent } from './404/404.component'
 import { RouterComponent } from './router/router.component';
-import { DataBindSample1 } from './data-bind-sample-1/data-bind-sample-1.component';
+import { DataBindSample1Component } from './data-bind-sample-1/data-bind-sample-1.component';
 
 // Routes
 const routes: Routes = [
   {
     path: 'data-bind-sample-1',
-    component: DataBindSample1
+    component: DataBindSample1Component
   }, {
     path: 'dashboard',
     component: DashboardComponent

@@ -1,12 +1,25 @@
 <div>
-  <label>{{title}}</label>
-  <label>My favorite hero: {{hero.name}}</label>
-  <ul>
-    <li *ngFor="let hero of heroes">
-      {{hero.name}}
-    </li>
-  </ul>
-  <div *ngIf="heroes.length >= 3">
-    Two Many Heroes
+  <div>
+    <label>{{title}}</label>
+    <label>My favorite hero: {{hero.name}}</label>
+    <ul>
+      <li *ngFor="let hero of heroes">
+        <data-bind-child (childDelete)="fatherDelete($event)" [hero]='hero' [ngClass]="{a1: true}"> </data-bind-child>
+      </li>
+    </ul>
+    <div *ngIf="heroes.length >= 3">
+      Two Many Heroes
+    </div>
+    <div class="class1 class2 class3 class4" [ngClass]="{a1: true}">
+      class
+    </div>
+    <div [style.color]="'red'">
+      style
+    </div>
+    <input type="button" (click)="clickEvent($event)" >
+  </div>
+  <div>
+    <input #phone id="test" [attr.aria-label]="title" value='jimmy'>
+    <input (click)="call(phone.value)" type="button" value="Call">
   </div>
 </div>

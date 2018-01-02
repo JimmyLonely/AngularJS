@@ -5,7 +5,7 @@ import { Hero } from '../model/hero';
   templateUrl: './data-bind-sample-1.component.html'
 })
 
-export class DataBindSample1 {
+export class DataBindSample1Component {
   title = 'Tour of heroes';
   heroes = [
     new Hero(1, 'jimmy1'),
@@ -15,4 +15,23 @@ export class DataBindSample1 {
   ]
 
   hero = this.heroes[0]
+  today = new Date()
+  showClass = undefined
+  jimmyName = ''
+
+  getVal() {
+    return 2+2;
+  }
+
+  call(phone) {
+    window.console.log(phone);
+  }
+
+  clickEvent() {
+    window.alert(arguments);
+  }
+
+  fatherDelete() {
+    window.alert(arguments.length);
+  }
 }
