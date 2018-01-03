@@ -8,15 +8,17 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './service/in-memory-data.service';
 
 // Directive
-import { SpyDirective } from './directive/spy.directive'
-import { UnlessDirective } from './directive/unless.directive'
+import { SpyDirective } from './directive/spy.directive';
+import { UnlessDirective } from './directive/unless.directive';
+import { HighLightDirective } from './attribute-directives/highlight.directive';
 
 // Route
 import { AppRoutingModule }  from './app-routing.module';
 
 //  Services
 import { HeroService } from './service/hero.service';
-import { LoggerService } from './service/logger.service'
+import { LoggerService } from './service/logger.service';
+
 
 //  Components
 import { AppComponent } from './app/app.component';
@@ -40,6 +42,9 @@ import { DataDirectiveComponent } from './data-directive/data-directive.componen
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   declarations: [
+    SpyDirective,
+    UnlessDirective,
+    HighLightDirective,
     AppComponent,
     DashboardComponent,
     HeroDetailComponent,
@@ -48,9 +53,7 @@ import { DataDirectiveComponent } from './data-directive/data-directive.componen
     LifeCycleHookComponent,
     PageNotFoundComponent,
     RouterComponent,
-    SpyDirective,
-    DataDirectiveComponent,
-    UnlessDirective
+    DataDirectiveComponent
   ],
   providers: [
     HeroService,

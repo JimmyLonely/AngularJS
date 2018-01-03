@@ -7,7 +7,10 @@ import { Hero } from '../model/hero';
 })
 
 export class DataDirectiveComponent {
-  private unless = true
+  unless = true;
+  color='blue';
+  defaultColor = "violet";
+
 
   heroes = [
     new Hero(1, 'jimmy1'),
