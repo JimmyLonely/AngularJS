@@ -1,0 +1,25 @@
+<div>
+  data directive
+
+  <div *ngFor="let hero of heroes">
+    {{ hero | json}}
+  </div>
+
+  <span>a</span><span>b</span>
+
+  <br>
+  <ng-template>
+    This is Jimmy
+  </ng-template>
+  <a href="">
+    <ng-container *ngIf="true">
+      ng container
+    </ng-container>
+  </a>
+  <div>
+    <input type="button" value="Click" (click)="toggle()">
+    <div *ngUnless="unless">
+      {{unless}}
+    </div>
+  </div>
+</div>

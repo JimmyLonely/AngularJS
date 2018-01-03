@@ -1,6 +1,7 @@
 // Lib
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -8,6 +9,7 @@ import { InMemoryDataService }  from './service/in-memory-data.service';
 
 // Directive
 import { SpyDirective } from './directive/spy.directive'
+import { UnlessDirective } from './directive/unless.directive'
 
 // Route
 import { AppRoutingModule }  from './app-routing.module';
@@ -25,10 +27,13 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.component';
 import { PageNotFoundComponent } from './404/404.component'
 import { RouterComponent } from './router/router.component';
+import { DataDirectiveComponent } from './data-directive/data-directive.component';
+
 
 @NgModule({
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     AppRoutingModule,
     HttpModule,
@@ -43,7 +48,9 @@ import { RouterComponent } from './router/router.component';
     LifeCycleHookComponent,
     PageNotFoundComponent,
     RouterComponent,
-    SpyDirective
+    SpyDirective,
+    DataDirectiveComponent,
+    UnlessDirective
   ],
   providers: [
     HeroService,
