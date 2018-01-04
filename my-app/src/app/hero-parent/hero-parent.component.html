@@ -1,0 +1,10 @@
+<div>
+  parent hero
+  <div>
+      <hero-child [hero]="heros[0]" [master]="master" (vote)="parentClick($event)"></hero-child>
+      <input type="button" (click)="add()" value="Add">
+  </div>
+
+  <br>
+  <input [value]="childMaster">
+</div>

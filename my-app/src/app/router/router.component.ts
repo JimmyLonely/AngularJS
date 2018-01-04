@@ -12,6 +12,5 @@ export class RouterComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    window.alert('on Init')
   }
 }

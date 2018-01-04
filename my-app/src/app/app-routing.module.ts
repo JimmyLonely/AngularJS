@@ -10,10 +10,14 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent} from './life-cycle-hook/life-cycle-hook.component';
 import { PageNotFoundComponent } from './404/404.component'
 import { RouterComponent } from './router/router.component';
+import { HeroParentComponent } from './hero-parent/hero-parent.component';
 
 // Routes
 const routes: Routes = [
   {
+    path: 'hero-parent',
+    component: HeroParentComponent
+  }, {
     path: 'dashboard',
     component: DashboardComponent
   }, {
@@ -42,7 +46,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [ RouterModule.forRoot(routes, {enableTracing: true}) ],
+    imports: [ RouterModule.forRoot(routes) ],
     exports: [ RouterModule ]
 })
 export class AppRoutingModule {}

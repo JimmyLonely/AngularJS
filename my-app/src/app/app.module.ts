@@ -25,6 +25,8 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.component';
 import { PageNotFoundComponent } from './404/404.component'
 import { RouterComponent } from './router/router.component';
+import { HeroParentComponent } from './hero-parent/hero-parent.component';
+import { HeroChildComponent } from './hero-child/hero-child.component';
 
 @NgModule({
   imports: [
@@ -43,6 +45,8 @@ import { RouterComponent } from './router/router.component';
     LifeCycleHookComponent,
     PageNotFoundComponent,
     RouterComponent,
+    HeroParentComponent,
+    HeroChildComponent,
     SpyDirective
   ],
   providers: [
