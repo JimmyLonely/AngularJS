@@ -1,10 +1,12 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component, ViewChild, ViewEncapsulation } from "@angular/core";
 import { Hero } from '../model/hero';
 import { HeroChildComponent } from '../hero-child/hero-child.component';
 
 @Component({
   selector: 'hero-parent',
-  templateUrl: './hero-parent.component.html'
+  templateUrl: './hero-parent.component.html',
+  encapsulation: ViewEncapsulation.Emulated,
+  styleUrls: ['./hero.parent.component.css']
 })
 
 export class HeroParentComponent {

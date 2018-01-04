@@ -1,9 +1,11 @@
-import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter } from "@angular/core";
+import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter, ViewEncapsulation } from "@angular/core";
 import { Hero } from '../model/hero';
 
 @Component({
   selector: 'hero-child',
-  templateUrl: './hero-child.component.html'
+  templateUrl: './hero-child.component.html',
+  encapsulation: ViewEncapsulation.Native,
+  styles: ['div {color: yellow}']
 })
 
 export class HeroChildComponent implements OnChanges {

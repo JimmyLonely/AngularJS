@@ -1,7 +1,7 @@
 <div>
   parent hero
   <div>
-      <hero-child [hero]="heros[0]" [master]="master" (vote)="parentClick($event)"></hero-child>
+      <hero-child [hero]="heros[0]" [master]="master" (vote)="parentClick($event)" class="host-el"></hero-child>
       <input type="button" (click)="add()" value="Add">
   </div>
 
