@@ -11,10 +11,14 @@ import { LifeCycleHookComponent} from './life-cycle-hook/life-cycle-hook.compone
 import { PageNotFoundComponent } from './404/404.component'
 import { RouterComponent } from './router/router.component';
 import { HeroParentComponent } from './hero-parent/hero-parent.component';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
 
 // Routes
 const routes: Routes = [
   {
+    path: 'ad-banner',
+    component: AdBannerComponent
+  }, {
     path: 'hero-parent',
     component: HeroParentComponent
   }, {
