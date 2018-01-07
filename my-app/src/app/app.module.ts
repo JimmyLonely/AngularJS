@@ -25,6 +25,10 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.component';
 import { PageNotFoundComponent } from './404/404.component'
 import { RouterComponent } from './router/router.component';
+import { PipeOriginComponent } from './pipe-origin/pipe-origin.component';
+
+// Pipes
+import { PlusPipe } from './pipes/plus.pipe';
 
 @NgModule({
   imports: [
@@ -43,6 +47,8 @@ import { RouterComponent } from './router/router.component';
     LifeCycleHookComponent,
     PageNotFoundComponent,
     RouterComponent,
+    PipeOriginComponent,
+    PlusPipe,
     SpyDirective
   ],
   providers: [
