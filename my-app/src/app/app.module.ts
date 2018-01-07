@@ -1,7 +1,7 @@
 // Lib
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './service/in-memory-data.service';
@@ -25,11 +25,13 @@ import { DataBindComponent } from './data-bind/data-bind.component';
 import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.component';
 import { PageNotFoundComponent } from './404/404.component'
 import { RouterComponent } from './router/router.component';
+import { Form1Component } from './form-1/form-1.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
@@ -43,6 +45,7 @@ import { RouterComponent } from './router/router.component';
     LifeCycleHookComponent,
     PageNotFoundComponent,
     RouterComponent,
+    Form1Component,
     SpyDirective
   ],
   providers: [
